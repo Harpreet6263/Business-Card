@@ -1,0 +1,94 @@
+.card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+    perspective: 1000px;
+    background: transparent;
+    
+}
+#card-inner {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+#front{
+    backface-visibility: hidden;
+    position: absolute;
+    background-color: rgb(247, 247, 239);
+    height: 100%;
+    width: 100%;
+    text-align: center;   
+}
+h1{
+    color: red;
+    margin-top: 50px;
+    transition: 0.4s;
+}
+#card-inner:hover h1{
+    margin-top: 20px;
+}
+#line{
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 200px;
+    margin-right: 200px;
+    opacity: 0;
+    transition: 1s;
+}
+#card-inner:hover #line{
+    opacity: 1;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#front-text{
+    margin-top: 65px;
+    opacity: 0;
+    transition: 1s;
+}
+#card-inner:hover #front-text {
+    opacity: 1;
+}
+
+.new-front{
+    transition: 2s;
+    transform: rotateY(180deg);
+ }
+#back{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    text-align: center;
+    color: rgb(18, 16, 16);
+    background-color: rgb(247, 247, 239);
+}
+
+span{
+    color: red;
+}
+.detail{
+    text-align: left;
+position: absolute;
+bottom: 10px;
+left: 15px;
+}
+.logo{
+    margin-bottom: 15px;
+    position: absolute;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    bottom: 10px;
+    right: 20px;
+}
+#link{
+    margin-top: 5px;
+}
